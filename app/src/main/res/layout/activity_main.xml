@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/background"
+>
+
+
+    <LinearLayout
+        android:id="@+id/album_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/album_text_view"
+            style="@style/TextStyleStandard"
+            android:background="@color/AlbumColor"
+            android:text="@string/first_category" />
+
+        <TextView
+            android:id="@+id/song_text_view"
+            style="@style/TextStyleStandard"
+            android:background="@color/SongColor"
+            android:text="@string/second_category" />
+        <TextView
+            android:id="@+id/artist_text_view"
+            style="@style/TextStyleStandard"
+            android:background="@color/ArtistColor"
+            android:text="@string/third_category" />
+    </LinearLayout>
+
+</ScrollView>
