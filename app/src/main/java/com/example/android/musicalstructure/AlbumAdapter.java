@@ -47,7 +47,7 @@ public class AlbumAdapter extends ArrayAdapter<AlbumClass> {
             // Return the whole list item layout (containing 2 TextViews)
             // so that it can be shown in the ListView
             //  return listItemView;
-
+            // Holder from sousa.carlos
             // Listener for song_button
             final ViewHolder viewHolder = new ViewHolder();
             viewHolder.position = position;
