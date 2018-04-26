@@ -3,4 +3,30 @@
     <string name="first_category">Album</string>
     <string name="second_category">Song</string>
     <string name="third_category">Artist</string>
+    <string name="function_play">Play</string>
+    <string name="function_stop">Stop</string>
+    <string name="now_playing">now_playing</string>
+    <string name="song">song</string>
+    <string name="home">home</string>
+    <string name="artist">artist</string>
+    <string name="album">album</string>
+
+
+    // Albums
+
+    <string name="Album2">Album2</string>
+    <string name="Album1">Album1</string>
+    <string name="Album3">Album3</string>
+    <string name="Artist1">Artist1</string>
+    <string name="Artist2">Artist2</string>
+    <string name="Artist3">Artist3</string>
+    <string name="song1">song1</string>
+    <string name="song2">song2</string>
+    <string name="song3">song3</string>
+    <string name="DurationSong1">130</string>
+    <string name="DurationSong2">230</string>
+    <string name="DurationSong3">1240</string>
+    <string name="Rock">Rock</string>
+    <string name="Pop">Pop</string>
+    <string name="Jazz">Jazz</string>
 </resources>

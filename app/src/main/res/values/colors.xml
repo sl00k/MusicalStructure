@@ -7,4 +7,5 @@
     <color name="SongColor">#00FFFF</color>
     <color name="ArtistColor">#FF007F</color>
     <color name="background">#50000000</color>
+    <color name="PlayerColor">#d66564</color>
 </resources>

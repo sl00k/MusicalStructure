@@ -14,18 +14,18 @@ public class ArtistActivity extends AppCompatActivity {
         setContentView(R.layout.standard_list);
 
         ArrayList<ArtistClass> artist = new ArrayList<ArtistClass>();
-        artist.add(new ArtistClass("Artist1",  "Genre1"));
-        artist.add(new ArtistClass("Artist2",  "Genre2"));
-        artist.add(new ArtistClass("Artist3",  "Genre3"));
-        artist.add(new ArtistClass("Artist1",  "Genre1"));
-        artist.add(new ArtistClass("Artist2",  "Genre2"));
-        artist.add(new ArtistClass("Artist3",  "Genre3"));
-        artist.add(new ArtistClass("Artist1",  "Genre1"));
-        artist.add(new ArtistClass("Artist2",  "Genre2"));
-        artist.add(new ArtistClass("Artist3",  "Genre3"));
-        artist.add(new ArtistClass("Artist1",  "Genre1"));
-        artist.add(new ArtistClass("Artist2",  "Genre2"));
-        artist.add(new ArtistClass("Artist3",  "Genre3"));
+        artist.add(new ArtistClass(getString(R.string.Artist1), getString(R.string.Rock)));
+        artist.add(new ArtistClass(getString(R.string.Artist2), getString(R.string.Pop)));
+        artist.add(new ArtistClass(getString(R.string.Artist3), getString(R.string.Jazz)));
+        artist.add(new ArtistClass(getString(R.string.Artist3), getString(R.string.Rock)));
+        artist.add(new ArtistClass(getString(R.string.Artist2), getString(R.string.Rock)));
+        artist.add(new ArtistClass(getString(R.string.Artist2), getString(R.string.Jazz)));
+        artist.add(new ArtistClass(getString(R.string.Artist1), getString(R.string.Jazz)));
+        artist.add(new ArtistClass(getString(R.string.Artist1), getString(R.string.Pop)));
+        artist.add(new ArtistClass(getString(R.string.Artist3), getString(R.string.Rock)));
+        artist.add(new ArtistClass(getString(R.string.Artist2), getString(R.string.Jazz)));
+        artist.add(new ArtistClass(getString(R.string.Artist3), getString(R.string.Jazz)));
+        artist.add(new ArtistClass(getString(R.string.Artist1), getString(R.string.Rock)));
 
         ArtistAdapter adapter = new ArtistAdapter(this, artist);
         ListView listview = (ListView) findViewById(R.id.standard_list);

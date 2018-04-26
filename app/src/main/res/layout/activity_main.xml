@@ -9,6 +9,7 @@
 >
 
 
+
     <LinearLayout
         android:id="@+id/album_layout"
         android:layout_width="match_parent"
@@ -16,6 +17,41 @@
         android:layout_gravity="center"
         android:orientation="vertical">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/player_song_text_view"
+                style="@style/TextStylePlayer"
+                android:layout_weight="1"
+                android:background="@color/PlayerColor"
+                android:hint="@string/now_playing" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="3"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/player_play_text_view"
+                    style="@style/TextStylePlayer"
+                    android:layout_weight="1"
+                    android:background="@color/PlayerColor"
+                    android:text="@string/function_play" />
+
+                <TextView
+                    android:id="@+id/player_stop_text_view"
+                    style="@style/TextStylePlayer"
+                    android:layout_weight="1"
+                    android:background="@color/PlayerColor"
+                    android:text="@string/function_stop" />
+            </LinearLayout>
+        </LinearLayout>
 
         <TextView
             android:id="@+id/album_text_view"

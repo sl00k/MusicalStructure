@@ -13,9 +13,9 @@ public class SongActivity extends AppCompatActivity{
         setContentView(R.layout.standard_list);
 
         ArrayList<SongClass> song = new ArrayList<SongClass>();
-        song.add(new SongClass("song1","130"));
-        song.add(new SongClass("song2","230"));
-        song.add(new SongClass("song3","1240"));
+        song.add(new SongClass(getString(R.string.song1), getString(R.string.DurationSong1)));
+        song.add(new SongClass(getString(R.string.song2), getString(R.string.DurationSong2)));
+        song.add(new SongClass(getString(R.string.song3), getString(R.string.DurationSong3)));
 
         SongAdapter adapter = new SongAdapter(this,song);
 

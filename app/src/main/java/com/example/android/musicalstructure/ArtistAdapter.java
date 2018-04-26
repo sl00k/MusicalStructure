@@ -1,11 +1,14 @@
 package com.example.android.musicalstructure;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -16,13 +19,13 @@ public class ArtistAdapter extends ArrayAdapter<ArtistClass> {
     }
     @NonNull
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
         // Check if the existing view is being reused, otherwise inflate the view
         View listItemView = convertView;
         if(listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(
                     R.layout.list_artist, parent, false);
-        }
+
         // Get the {@link AndroidFlavor} object located at this position in the list
         ArtistClass currentWord = getItem(position);
 
@@ -38,8 +41,49 @@ public class ArtistAdapter extends ArrayAdapter<ArtistClass> {
         // set this text on the number TextView
         genreTextView.setText(currentWord.getGenre());
 
-        // Return the whole list item layout (containing 2 TextViews and an ImageView)
-        // so that it can be shown in the ListView
+            // Listener for album_button
+            final ViewHolder viewHolder = new ViewHolder();
+            viewHolder.position = position;
+
+            viewHolder.buttonAlbum = listItemView.findViewById(R.id.album_button);
+            viewHolder.buttonAlbum.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    // Create a new intent to open the {@link AlbumActivity}
+                    Bundle basket = new Bundle();
+                    basket.putInt("pos", position);
+                    Intent albumIntent = new Intent(getContext(), AlbumActivity.class);
+                    albumIntent.putExtras(basket);
+                    // Start the new activity
+                    getContext().startActivity(albumIntent);
+                }
+            });
+            // Listener for home_button
+            viewHolder.buttonHome = listItemView.findViewById(R.id.home_button);
+            viewHolder.buttonHome.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    // Create a new intent to open the {@link MainActivity}
+                    Bundle basket = new Bundle();
+                    basket.putInt("pos", position);
+                    Intent MainIntent = new Intent(getContext(), MainActivity.class);
+                    MainIntent.putExtras(basket);
+                    // Start the new activity
+                    getContext().startActivity(MainIntent);
+                }
+            });
+            listItemView.setTag(viewHolder);
+
+        } else {
+        }
+
         return listItemView;
-    }}
+    }
+
+    class ViewHolder {
+        int position;
+        Button buttonHome;
+        Button buttonAlbum;
+    }
+}
 

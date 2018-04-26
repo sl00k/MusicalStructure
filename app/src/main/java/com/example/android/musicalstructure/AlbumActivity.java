@@ -13,9 +13,9 @@ public class AlbumActivity extends AppCompatActivity{
         setContentView(R.layout.standard_list);
 
         ArrayList<AlbumClass> album = new ArrayList<AlbumClass>();
-        album.add(new AlbumClass("Album1",  "Artist1"));
-        album.add(new AlbumClass("Album2",  "Artist2"));
-        album.add(new AlbumClass("Album3",  "Artist3"));
+        album.add(new AlbumClass(getString(R.string.Album1), getString(R.string.Artist1)));
+        album.add(new AlbumClass(getString(R.string.Album2), getString(R.string.Artist2)));
+        album.add(new AlbumClass(getString(R.string.Album3), getString(R.string.Artist3)));
 
         AlbumAdapter adapter = new AlbumAdapter(this,album);
 
